@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static ru.netology.data.SQLHelper.cleanDatabase;
 
 public class BuyCreditTest {
-    BuyPage buyPage;
+    CreditPage creditPage;
     MainPage mainPage;
 
 
@@ -20,7 +20,7 @@ public class BuyCreditTest {
     void setUp() {
         open("http://localhost:8080");
         mainPage=new MainPage();
-        buyPage= mainPage.goToBuyPage();
+        creditPage= mainPage.goToCreditPage();
     }
 
     @AfterEach
@@ -29,7 +29,7 @@ public class BuyCreditTest {
     }
 
     @Test
-    @DisplayName("Should get valid data form Buy")
+    @DisplayName("Should get valid data form credit")
     public void shouldTest() {
         buyPage.putData(DataHelper.getFirstCardInfo(),DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         buyPage.successNotificationWait();
@@ -37,7 +37,7 @@ public class BuyCreditTest {
     }
 
     @Test
-    @DisplayName("Owner with double surname and hyphen form Buy")
+    @DisplayName("Owner with double surname and hyphen form credit")
     public void shouldTestPositiveOwner() {
         buyPage.putData(DataHelper.getFirstCardInfo(),DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         buyPage.successNotificationWait();
@@ -45,7 +45,7 @@ public class BuyCreditTest {
     }
 
     @Test
-    @DisplayName("Invalid value in field Card Number form Buy")
+    @DisplayName("Invalid value in field Card Number form credit")
     public void shouldTestNegativeCardNumber() {
         buyPage.putData(DataHelper.getFirstCardInfo(),DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         buyPage.notSuccessNotificationWait();
@@ -53,7 +53,7 @@ public class BuyCreditTest {
     }
 
     @Test
-    @DisplayName("Null card number form Buy")
+    @DisplayName("Null card number form credit")
     public void shouldTestNegativeNullCardNumber() {
         buyPage.putData(DataHelper.getFirstCardInfo(),DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         buyPage.notSuccessNotificationWait();
@@ -61,7 +61,7 @@ public class BuyCreditTest {
     }
 
     @Test
-    @DisplayName("Invalid value Month form Buy")
+    @DisplayName("Invalid value Month form credit")
     public void shouldTestNegativeMonth() {
         buyPage.putData(DataHelper.getFirstCardInfo(),DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         buyPage.notSuccessNotificationWait();
@@ -69,7 +69,7 @@ public class BuyCreditTest {
     }
 
     @Test
-    @DisplayName("Invalid value Year form Buy")
+    @DisplayName("Invalid value Year form credit")
     public void shouldTestNegativeYear() {
         buyPage.putData(DataHelper.getFirstCardInfo(),DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         buyPage.notSuccessNotificationWait();
@@ -77,7 +77,7 @@ public class BuyCreditTest {
     }
 
     @Test
-    @DisplayName("One letter in field Owner form Buy")
+    @DisplayName("One letter in field Owner form credit")
     public void shouldTestNegativeOneLetterOwner() {
         buyPage.putData(DataHelper.getFirstCardInfo(),DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         buyPage.notSuccessNotificationWait();
@@ -85,7 +85,7 @@ public class BuyCreditTest {
     }
 
     @Test
-    @DisplayName("Invalid value CVC/CVV form Buy")
+    @DisplayName("Invalid value CVC/CVV form credit")
     public void shouldTestNegativeCVC() {
         buyPage.putData(DataHelper.getFirstCardInfo(),DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         buyPage.notSuccessNotificationWait();
@@ -93,7 +93,7 @@ public class BuyCreditTest {
     }
 
     @Test
-    @DisplayName("Latin value in owner field form Buy")
+    @DisplayName("Latin value in owner field form credit")
     public void shouldTestNegativeLatinValueOwner() {
         buyPage.putData(DataHelper.getFirstCardInfo(),DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         buyPage.notSuccessNotificationWait();
@@ -101,14 +101,14 @@ public class BuyCreditTest {
     }
 
     @Test
-    @DisplayName("Special symbol and numbers in owner field form Buy")
+    @DisplayName("Special symbol and numbers in owner field form credit")
     public void shouldTestNegativeSpecialSymbolOwner() {
         buyPage.putData(DataHelper.getFirstCardInfo(),DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         buyPage.notSuccessNotificationWait();
         Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
     }
     @Test
-    @DisplayName("Card number field-empty, rest-valid form Buy")
+    @DisplayName("Card number field-empty, rest-valid form credit")
     public void shouldTestNegativeCardNumberEmpty() {
         buyPage.putData("","11","25","IVANOVA MARIA","543");
         buyPage.incorrectCardNumberNotificationWait();
@@ -117,7 +117,7 @@ public class BuyCreditTest {
     }
 
     @Test
-    @DisplayName("Month field-empty, rest-valid form Buy")
+    @DisplayName("Month field-empty, rest-valid form credit")
     public void shouldTestNegativeMonthEmpty() {
         buyPage.putData("4444 4444 4444 4441","","25","IVANOVA MARIA","543");
         buyPage.incorrectMonthNotificationWait();
@@ -126,7 +126,7 @@ public class BuyCreditTest {
     }
 
     @Test
-    @DisplayName("Year field-empty, rest-valid form Buy")
+    @DisplayName("Year field-empty, rest-valid form credit")
     public void shouldTestNegativeYearEmpty() {
         buyPage.putData("4444 4444 4444 4441","11","","IVANOVA MARIA","543");
         buyPage.incorrectYearNotificationWait();
@@ -135,7 +135,7 @@ public class BuyCreditTest {
     }
 
     @Test
-    @DisplayName("Owner field-empty, rest-valid form Buy")
+    @DisplayName("Owner field-empty, rest-valid form credit")
     public void shouldTestNegativeOwnerEmpty() {
         buyPage.putData("4444 4444 4444 4441","11","12","","543");
         buyPage.incorrectOwnerNotificationWait();
@@ -144,7 +144,7 @@ public class BuyCreditTest {
     }
 
     @Test
-    @DisplayName("CVC/CVV field-empty, rest-valid form Buy")
+    @DisplayName("CVC/CVV field-empty, rest-valid form credit")
     public void shouldTestNegativeCVCEmpty() {
         buyPage.putData("4444 4444 4444 4441","11","12","IVANOVA MARIA","");
         buyPage.incorrectCVCNotificationWait();
@@ -153,7 +153,7 @@ public class BuyCreditTest {
     }
 
     @Test
-    @DisplayName("Test empty form")
+    @DisplayName("Test empty form credit")
     public void shouldTestEmptyForm() {
         buyPage.putData("","","","","");
         buyPage.incorrectCardNumberNotificationWait();
