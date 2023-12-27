@@ -20,7 +20,7 @@ public class DataHelper {
     }
 
     public static String getSecondCardInfo (){
-        return ("8888 7777 6666 4545");
+        return ("8888 7777 6666 454");
     }
 
     public static String getRandomCardInfo (){
@@ -60,7 +60,7 @@ public class DataHelper {
         return futureYear.format(DateTimeFormatter.ofPattern(pattern));
     }
 
-    public static String MoreFiveYears(String pattern) {
+    public static String moreFiveYears(String pattern) {
         Year currentYear = Year.now();
         Year futureYear = currentYear.plusYears(10);
         return futureYear.format(DateTimeFormatter.ofPattern(pattern));

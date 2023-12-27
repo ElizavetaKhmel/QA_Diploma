@@ -9,13 +9,16 @@ import java.sql.SQLException;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
     public class SQLHelper {
         private static final QueryRunner runner = new QueryRunner();
+        private static String userName = System.getProperty("db.username");
+        private static String password = System.getProperty("db.password");
+        private static String url = System.getProperty("db.url");
 
 
         private SQLHelper() {
         }
 
         private static Connection getConn() throws SQLException {
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/app", "app", "pass");
+            return DriverManager.getConnection(url, password, userName);
         }
 
         @SneakyThrows
