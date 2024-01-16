@@ -3,8 +3,6 @@ package ru.netology.page;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.Keys;
-import ru.netology.data.DataHelper;
 
 import java.time.Duration;
 
@@ -30,7 +28,6 @@ public class BuyPage {
     private SelenideElement validityError = $(byText("Неверно указан срок действия карты"));
     private SelenideElement cardExpiredError = $(byText("Истёк срок действия карты"));
     private SelenideElement emptyOwnerError = $(byText("Поле обязательно для заполнения"));
-    private SelenideElement incorrectFormatOwner = $(byText("Неверный формат"));
     private SelenideElement wrongFormatCVV = $(byText("Неверный формат"));
     private SelenideElement continueButton = $$("button span.button__text").find(exactText("Продолжить"));
 

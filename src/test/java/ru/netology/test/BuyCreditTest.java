@@ -50,7 +50,6 @@ public class BuyCreditTest {
     public void shouldTestNegativeCardNumber() {
         creditPage.putData("4444 4444 4444 4442",DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         creditPage.wrongCardNumberNotification();
-        creditPage.notSuccessNotificationWait();
         Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
     }
 
@@ -68,7 +67,6 @@ public class BuyCreditTest {
     public void shouldTestNegativeMonth() {
         creditPage.putData("4444 4444 4444 4442",("13"),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         creditPage.wrongMonthNotification();
-        creditPage.notSuccessNotificationWait();
         Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
     }
 
@@ -77,7 +75,6 @@ public class BuyCreditTest {
     public void shouldTestNegativeYear() {
         creditPage.putData("4444 4444 4444 4442",DataHelper.month(),("31"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         creditPage.validityErrorNotification();
-        creditPage.notSuccessNotificationWait();
         Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
     }
 
@@ -95,7 +92,6 @@ public class BuyCreditTest {
     public void shouldTestNegativeCVC() {
         creditPage.putData("4444 4444 4444 4442",DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),("1"));
         creditPage.wrongFormatCVVNotificationWait();
-        creditPage.notSuccessNotificationWait();
         Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
     }
 

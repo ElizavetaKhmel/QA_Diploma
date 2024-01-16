@@ -28,7 +28,6 @@ public class CreditPage {
     private SelenideElement validityError =$(byText("Неверно указан срок действия карты"));
     private SelenideElement cardExpiredError = $(byText("Истёк срок действия карты"));
     private SelenideElement emptyOwnerError = $(byText("Поле обязательно для заполнения"));
-    private SelenideElement incorrectFormatOwner = $(byText("Неверный формат"));
     private SelenideElement wrongFormatCVV = $(byText("Неверный формат"));
     private SelenideElement continueButton = $$("button span.button__text").find(exactText("Продолжить"));
 

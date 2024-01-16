@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.netology.test.BuyTest" tests="16" skipped="0" failures="16" errors="0" timestamp="2024-01-16T14:57:42" hostname="192-168-0-104.local" time="307.302">
+<testsuite name="ru.netology.test.BuyTest" tests="16" skipped="0" failures="16" errors="0" timestamp="2024-01-16T15:40:10" hostname="192-168-0-104.local" time="306.961">
   <properties/>
-  <testcase name="Null card number form Buy" classname="ru.netology.test.BuyTest" time="20.62">
-    <failure message="Element not found {by text: Неверный формат}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417082722.14.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417082722.14.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {by text: Неверный формат}
+  <testcase name="Null card number form Buy" classname="ru.netology.test.BuyTest" time="20.659">
+    <failure message="Element not found {by text: Неверный формат}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419630972.14.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419630972.14.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {by text: Неверный формат}
 Expected: visible
-Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417082722.14.png
-Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417082722.14.html
+Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419630972.14.png
+Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419630972.14.html
 Timeout: 20 s.
 Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:91)
@@ -19,7 +19,7 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy18.shouldBe(Unknown Source)
-	at app//ru.netology.page.BuyPage.incorrectCardNumberNotification(BuyPage.java:60)
+	at app//ru.netology.page.BuyPage.incorrectCardNumberNotification(BuyPage.java:57)
 	at app//ru.netology.test.BuyTest.shouldTestNegativeNullCardNumber(BuyTest.java:60)
 	at java.base@21.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.1/java.lang.reflect.Method.invoke(Method.java:580)
@@ -141,10 +141,10 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.1', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [15d67add5466a3bf792a855248154be0, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
+Command: [ee6adb6164fbfb47b6212fd1da1ad2c8, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
  ', '    ')) = &quot;Неверный формат&quot;]/parent::*}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /var/folders/cw/mv6p5m6s2k3...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55213}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55213/devtoo..., se:cdpVersion: 120.0.6099.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 15d67add5466a3bf792a855248154be0
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /var/folders/cw/mv6p5m6s2k3...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56070}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56070/devtoo..., se:cdpVersion: 120.0.6099.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee6adb6164fbfb47b6212fd1da1ad2c8
 	at java.base@21.0.1/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base@21.0.1/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base@21.0.1/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -167,11 +167,11 @@ Session ID: 15d67add5466a3bf792a855248154be0
 	... 89 more
 </failure>
   </testcase>
-  <testcase name="Invalid value Year form Buy" classname="ru.netology.test.BuyTest" time="20.785">
-    <failure message="Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417103504.15.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417103504.15.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)" type="com.codeborne.selenide.ex.ElementNotFound">Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}
+  <testcase name="Invalid value Year form Buy" classname="ru.netology.test.BuyTest" time="20.668">
+    <failure message="Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419651660.15.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419651660.15.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)" type="com.codeborne.selenide.ex.ElementNotFound">Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}
 Expected: visible
-Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417103504.15.png
-Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417103504.15.html
+Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419651660.15.png
+Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419651660.15.html
 Timeout: 20 s.
 Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:91)
@@ -184,7 +184,7 @@ Caused by: NoSuchElementException: Cannot locate an element  .notification__cont
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy18.shouldBe(Unknown Source)
-	at app//ru.netology.page.BuyPage.notSuccessNotification(BuyPage.java:56)
+	at app//ru.netology.page.BuyPage.notSuccessNotification(BuyPage.java:53)
 	at app//ru.netology.test.BuyTest.shouldTestNegativeYear(BuyTest.java:79)
 	at java.base@21.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.1/java.lang.reflect.Method.invoke(Method.java:580)
@@ -309,11 +309,11 @@ Driver info: driver.version: unknown
 	... 89 more
 </failure>
   </testcase>
-  <testcase name="Invalid value CVC/CVV form Buy" classname="ru.netology.test.BuyTest" time="20.592">
-    <failure message="Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417124131.16.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417124131.16.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)" type="com.codeborne.selenide.ex.ElementNotFound">Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}
+  <testcase name="Invalid value CVC/CVV form Buy" classname="ru.netology.test.BuyTest" time="20.803">
+    <failure message="Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419672484.16.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419672484.16.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)" type="com.codeborne.selenide.ex.ElementNotFound">Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}
 Expected: visible
-Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417124131.16.png
-Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417124131.16.html
+Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419672484.16.png
+Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419672484.16.html
 Timeout: 20 s.
 Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:91)
@@ -326,7 +326,7 @@ Caused by: NoSuchElementException: Cannot locate an element  .notification__cont
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy18.shouldBe(Unknown Source)
-	at app//ru.netology.page.BuyPage.notSuccessNotification(BuyPage.java:56)
+	at app//ru.netology.page.BuyPage.notSuccessNotification(BuyPage.java:53)
 	at app//ru.netology.test.BuyTest.shouldTestNegativeCVC(BuyTest.java:97)
 	at java.base@21.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.1/java.lang.reflect.Method.invoke(Method.java:580)
@@ -451,11 +451,11 @@ Driver info: driver.version: unknown
 	... 89 more
 </failure>
   </testcase>
-  <testcase name="Year field-empty, rest-valid form Buy" classname="ru.netology.test.BuyTest" time="20.598">
-    <failure message="Element not found {by text: Неверно указан срок действия карты}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417144703.17.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417144703.17.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {by text: Неверно указан срок действия карты}
+  <testcase name="Year field-empty, rest-valid form Buy" classname="ru.netology.test.BuyTest" time="20.793">
+    <failure message="Element not found {by text: Неверно указан срок действия карты}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419693254.17.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419693254.17.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {by text: Неверно указан срок действия карты}
 Expected: visible
-Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417144703.17.png
-Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417144703.17.html
+Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419693254.17.png
+Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419693254.17.html
 Timeout: 20 s.
 Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:91)
@@ -469,7 +469,7 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy18.shouldBe(Unknown Source)
-	at app//ru.netology.page.BuyPage.validityErrorNotification(BuyPage.java:72)
+	at app//ru.netology.page.BuyPage.validityErrorNotification(BuyPage.java:69)
 	at app//ru.netology.test.BuyTest.shouldTestNegativeYearEmpty(BuyTest.java:140)
 	at java.base@21.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.1/java.lang.reflect.Method.invoke(Method.java:580)
@@ -591,10 +591,10 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.1', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [15d67add5466a3bf792a855248154be0, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
+Command: [ee6adb6164fbfb47b6212fd1da1ad2c8, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
  ', '    ')) = &quot;Неверно указан срок действия карты&quot;]/parent::*}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /var/folders/cw/mv6p5m6s2k3...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55213}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55213/devtoo..., se:cdpVersion: 120.0.6099.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 15d67add5466a3bf792a855248154be0
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /var/folders/cw/mv6p5m6s2k3...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56070}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56070/devtoo..., se:cdpVersion: 120.0.6099.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee6adb6164fbfb47b6212fd1da1ad2c8
 	at java.base@21.0.1/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base@21.0.1/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base@21.0.1/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -617,11 +617,11 @@ Session ID: 15d67add5466a3bf792a855248154be0
 	... 89 more
 </failure>
   </testcase>
-  <testcase name="Latin value in owner field form Buy" classname="ru.netology.test.BuyTest" time="20.627">
-    <failure message="Element not found {by text: Поле обязательно для заполнения}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417165316.18.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417165316.18.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {by text: Поле обязательно для заполнения}
+  <testcase name="Latin value in owner field form Buy" classname="ru.netology.test.BuyTest" time="20.628">
+    <failure message="Element not found {by text: Поле обязательно для заполнения}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419713898.18.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419713898.18.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {by text: Поле обязательно для заполнения}
 Expected: visible
-Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417165316.18.png
-Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417165316.18.html
+Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419713898.18.png
+Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419713898.18.html
 Timeout: 20 s.
 Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:91)
@@ -635,7 +635,7 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy18.shouldBe(Unknown Source)
-	at app//ru.netology.page.BuyPage.ownerEmptyNotificationWait(BuyPage.java:80)
+	at app//ru.netology.page.BuyPage.ownerEmptyNotificationWait(BuyPage.java:77)
 	at app//ru.netology.test.BuyTest.shouldTestNegativeLatinValueOwner(BuyTest.java:105)
 	at java.base@21.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.1/java.lang.reflect.Method.invoke(Method.java:580)
@@ -757,10 +757,10 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.1', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [15d67add5466a3bf792a855248154be0, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
+Command: [ee6adb6164fbfb47b6212fd1da1ad2c8, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
  ', '    ')) = &quot;Поле обязательно для заполнения&quot;]/parent::*}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /var/folders/cw/mv6p5m6s2k3...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55213}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55213/devtoo..., se:cdpVersion: 120.0.6099.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 15d67add5466a3bf792a855248154be0
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /var/folders/cw/mv6p5m6s2k3...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56070}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56070/devtoo..., se:cdpVersion: 120.0.6099.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee6adb6164fbfb47b6212fd1da1ad2c8
 	at java.base@21.0.1/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base@21.0.1/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base@21.0.1/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -783,11 +783,11 @@ Session ID: 15d67add5466a3bf792a855248154be0
 	... 89 more
 </failure>
   </testcase>
-  <testcase name="One letter in field Owner form Buy" classname="ru.netology.test.BuyTest" time="20.68">
-    <failure message="Element not found {by text: Поле обязательно для заполнения}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417186018.19.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417186018.19.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {by text: Поле обязательно для заполнения}
+  <testcase name="One letter in field Owner form Buy" classname="ru.netology.test.BuyTest" time="20.671">
+    <failure message="Element not found {by text: Поле обязательно для заполнения}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419734554.19.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419734554.19.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {by text: Поле обязательно для заполнения}
 Expected: visible
-Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417186018.19.png
-Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417186018.19.html
+Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419734554.19.png
+Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419734554.19.html
 Timeout: 20 s.
 Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:91)
@@ -801,7 +801,7 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy18.shouldBe(Unknown Source)
-	at app//ru.netology.page.BuyPage.ownerEmptyNotificationWait(BuyPage.java:80)
+	at app//ru.netology.page.BuyPage.ownerEmptyNotificationWait(BuyPage.java:77)
 	at app//ru.netology.test.BuyTest.shouldTestNegativeOneLetterOwner(BuyTest.java:87)
 	at java.base@21.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.1/java.lang.reflect.Method.invoke(Method.java:580)
@@ -923,10 +923,10 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.1', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [15d67add5466a3bf792a855248154be0, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
+Command: [ee6adb6164fbfb47b6212fd1da1ad2c8, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
  ', '    ')) = &quot;Поле обязательно для заполнения&quot;]/parent::*}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /var/folders/cw/mv6p5m6s2k3...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55213}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55213/devtoo..., se:cdpVersion: 120.0.6099.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 15d67add5466a3bf792a855248154be0
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /var/folders/cw/mv6p5m6s2k3...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56070}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56070/devtoo..., se:cdpVersion: 120.0.6099.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee6adb6164fbfb47b6212fd1da1ad2c8
 	at java.base@21.0.1/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base@21.0.1/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base@21.0.1/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -949,7 +949,7 @@ Session ID: 15d67add5466a3bf792a855248154be0
 	... 89 more
 </failure>
   </testcase>
-  <testcase name="Owner with double surname and hyphen form Buy" classname="ru.netology.test.BuyTest" time="8.023">
+  <testcase name="Owner with double surname and hyphen form Buy" classname="ru.netology.test.BuyTest" time="10.567">
     <failure message="java.sql.SQLException: No suitable driver found for " type="java.sql.SQLException">java.sql.SQLException: No suitable driver found for 
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:708)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
@@ -1071,11 +1071,11 @@ Session ID: 15d67add5466a3bf792a855248154be0
 		... 60 more
 </failure>
   </testcase>
-  <testcase name="CVC/CVV field-empty, rest-valid form Buy" classname="ru.netology.test.BuyTest" time="20.615">
-    <failure message="Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417214647.20.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417214647.20.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)" type="com.codeborne.selenide.ex.ElementNotFound">Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}
+  <testcase name="CVC/CVV field-empty, rest-valid form Buy" classname="ru.netology.test.BuyTest" time="20.639">
+    <failure message="Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419765739.20.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419765739.20.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)" type="com.codeborne.selenide.ex.ElementNotFound">Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}
 Expected: visible
-Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417214647.20.png
-Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417214647.20.html
+Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419765739.20.png
+Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419765739.20.html
 Timeout: 20 s.
 Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:91)
@@ -1088,7 +1088,7 @@ Caused by: NoSuchElementException: Cannot locate an element  .notification__cont
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy18.shouldBe(Unknown Source)
-	at app//ru.netology.page.BuyPage.notSuccessNotification(BuyPage.java:56)
+	at app//ru.netology.page.BuyPage.notSuccessNotification(BuyPage.java:53)
 	at app//ru.netology.test.BuyTest.shouldTestNegativeCVCEmpty(BuyTest.java:159)
 	at java.base@21.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.1/java.lang.reflect.Method.invoke(Method.java:580)
@@ -1213,11 +1213,11 @@ Driver info: driver.version: unknown
 	... 89 more
 </failure>
   </testcase>
-  <testcase name="Invalid value in field Card Number form Buy" classname="ru.netology.test.BuyTest" time="20.608">
-    <failure message="Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417235268.21.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417235268.21.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)" type="com.codeborne.selenide.ex.ElementNotFound">Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}
+  <testcase name="Invalid value in field Card Number form Buy" classname="ru.netology.test.BuyTest" time="20.673">
+    <failure message="Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419786431.21.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419786431.21.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)" type="com.codeborne.selenide.ex.ElementNotFound">Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}
 Expected: visible
-Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417235268.21.png
-Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417235268.21.html
+Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419786431.21.png
+Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419786431.21.html
 Timeout: 20 s.
 Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:91)
@@ -1230,7 +1230,7 @@ Caused by: NoSuchElementException: Cannot locate an element  .notification__cont
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy18.shouldBe(Unknown Source)
-	at app//ru.netology.page.BuyPage.notSuccessNotification(BuyPage.java:56)
+	at app//ru.netology.page.BuyPage.notSuccessNotification(BuyPage.java:53)
 	at app//ru.netology.test.BuyTest.shouldTestNegativeCardNumber(BuyTest.java:52)
 	at java.base@21.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.1/java.lang.reflect.Method.invoke(Method.java:580)
@@ -1355,11 +1355,11 @@ Driver info: driver.version: unknown
 	... 89 more
 </failure>
   </testcase>
-  <testcase name="Special symbol and numbers in owner field form Buy" classname="ru.netology.test.BuyTest" time="20.604">
-    <failure message="Element not found {by text: Поле обязательно для заполнения}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417255849.22.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417255849.22.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {by text: Поле обязательно для заполнения}
+  <testcase name="Special symbol and numbers in owner field form Buy" classname="ru.netology.test.BuyTest" time="20.658">
+    <failure message="Element not found {by text: Поле обязательно для заполнения}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419807096.22.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419807096.22.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {by text: Поле обязательно для заполнения}
 Expected: visible
-Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417255849.22.png
-Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417255849.22.html
+Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419807096.22.png
+Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419807096.22.html
 Timeout: 20 s.
 Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:91)
@@ -1373,7 +1373,7 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy18.shouldBe(Unknown Source)
-	at app//ru.netology.page.BuyPage.ownerEmptyNotificationWait(BuyPage.java:80)
+	at app//ru.netology.page.BuyPage.ownerEmptyNotificationWait(BuyPage.java:77)
 	at app//ru.netology.test.BuyTest.shouldTestNegativeSpecialSymbolOwner(BuyTest.java:114)
 	at java.base@21.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.1/java.lang.reflect.Method.invoke(Method.java:580)
@@ -1495,10 +1495,10 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.1', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [15d67add5466a3bf792a855248154be0, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
+Command: [ee6adb6164fbfb47b6212fd1da1ad2c8, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
  ', '    ')) = &quot;Поле обязательно для заполнения&quot;]/parent::*}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /var/folders/cw/mv6p5m6s2k3...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55213}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55213/devtoo..., se:cdpVersion: 120.0.6099.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 15d67add5466a3bf792a855248154be0
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /var/folders/cw/mv6p5m6s2k3...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56070}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56070/devtoo..., se:cdpVersion: 120.0.6099.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee6adb6164fbfb47b6212fd1da1ad2c8
 	at java.base@21.0.1/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base@21.0.1/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base@21.0.1/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -1521,11 +1521,11 @@ Session ID: 15d67add5466a3bf792a855248154be0
 	... 89 more
 </failure>
   </testcase>
-  <testcase name="Owner field-empty, rest-valid form Buy" classname="ru.netology.test.BuyTest" time="20.617">
-    <failure message="Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417276490.23.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417276490.23.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)" type="com.codeborne.selenide.ex.ElementNotFound">Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}
+  <testcase name="Owner field-empty, rest-valid form Buy" classname="ru.netology.test.BuyTest" time="20.585">
+    <failure message="Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419827686.23.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419827686.23.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)" type="com.codeborne.selenide.ex.ElementNotFound">Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}
 Expected: visible
-Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417276490.23.png
-Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417276490.23.html
+Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419827686.23.png
+Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419827686.23.html
 Timeout: 20 s.
 Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:91)
@@ -1538,7 +1538,7 @@ Caused by: NoSuchElementException: Cannot locate an element  .notification__cont
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy18.shouldBe(Unknown Source)
-	at app//ru.netology.page.BuyPage.notSuccessNotification(BuyPage.java:56)
+	at app//ru.netology.page.BuyPage.notSuccessNotification(BuyPage.java:53)
 	at app//ru.netology.test.BuyTest.shouldTestNegativeOwnerEmpty(BuyTest.java:150)
 	at java.base@21.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.1/java.lang.reflect.Method.invoke(Method.java:580)
@@ -1663,7 +1663,7 @@ Driver info: driver.version: unknown
 	... 89 more
 </failure>
   </testcase>
-  <testcase name="Should get valid data form Buy" classname="ru.netology.test.BuyTest" time="10.456">
+  <testcase name="Should get valid data form Buy" classname="ru.netology.test.BuyTest" time="6.79">
     <failure message="java.sql.SQLException: No suitable driver found for " type="java.sql.SQLException">java.sql.SQLException: No suitable driver found for 
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:708)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
@@ -1785,11 +1785,11 @@ Driver info: driver.version: unknown
 		... 60 more
 </failure>
   </testcase>
-  <testcase name="Invalid value Month form Buy" classname="ru.netology.test.BuyTest" time="20.611">
-    <failure message="Element not found {by text: Неверный формат}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417307528.24.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417307528.24.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {by text: Неверный формат}
+  <testcase name="Invalid value Month form Buy" classname="ru.netology.test.BuyTest" time="20.706">
+    <failure message="Element not found {by text: Неверный формат}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419855133.24.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419855133.24.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {by text: Неверный формат}
 Expected: visible
-Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417307528.24.png
-Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417307528.24.html
+Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419855133.24.png
+Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419855133.24.html
 Timeout: 20 s.
 Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:91)
@@ -1803,7 +1803,7 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy18.shouldBe(Unknown Source)
-	at app//ru.netology.page.BuyPage.incorrectMonthNotification(BuyPage.java:64)
+	at app//ru.netology.page.BuyPage.incorrectMonthNotification(BuyPage.java:61)
 	at app//ru.netology.test.BuyTest.shouldTestNegativeMonth(BuyTest.java:69)
 	at java.base@21.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.1/java.lang.reflect.Method.invoke(Method.java:580)
@@ -1925,10 +1925,10 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.1', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [15d67add5466a3bf792a855248154be0, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
+Command: [ee6adb6164fbfb47b6212fd1da1ad2c8, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
  ', '    ')) = &quot;Неверный формат&quot;]/parent::*}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /var/folders/cw/mv6p5m6s2k3...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55213}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55213/devtoo..., se:cdpVersion: 120.0.6099.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 15d67add5466a3bf792a855248154be0
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /var/folders/cw/mv6p5m6s2k3...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56070}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56070/devtoo..., se:cdpVersion: 120.0.6099.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee6adb6164fbfb47b6212fd1da1ad2c8
 	at java.base@21.0.1/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base@21.0.1/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base@21.0.1/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -1951,11 +1951,11 @@ Session ID: 15d67add5466a3bf792a855248154be0
 	... 89 more
 </failure>
   </testcase>
-  <testcase name="Card number field-empty, rest-valid form Buy" classname="ru.netology.test.BuyTest" time="20.591">
-    <failure message="Element not found {by text: Истёк срок действия карты}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417328129.25.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417328129.25.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {by text: Истёк срок действия карты}
+  <testcase name="Card number field-empty, rest-valid form Buy" classname="ru.netology.test.BuyTest" time="20.653">
+    <failure message="Element not found {by text: Истёк срок действия карты}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419875830.25.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419875830.25.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {by text: Истёк срок действия карты}
 Expected: visible
-Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417328129.25.png
-Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417328129.25.html
+Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419875830.25.png
+Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419875830.25.html
 Timeout: 20 s.
 Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*/text()[normalize-space(translate(string(.), '
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:91)
@@ -1969,7 +1969,7 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy18.shouldBe(Unknown Source)
-	at app//ru.netology.page.BuyPage.incorrectCardNotificationWait(BuyPage.java:76)
+	at app//ru.netology.page.BuyPage.incorrectCardNotificationWait(BuyPage.java:73)
 	at app//ru.netology.test.BuyTest.shouldTestNegativeCardNumberEmpty(BuyTest.java:122)
 	at java.base@21.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.1/java.lang.reflect.Method.invoke(Method.java:580)
@@ -2091,10 +2091,10 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.1', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [15d67add5466a3bf792a855248154be0, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
+Command: [ee6adb6164fbfb47b6212fd1da1ad2c8, findElement {using=xpath, value=.//*/text()[normalize-space(translate(string(.), '	
  ', '    ')) = &quot;Истёк срок действия карты&quot;]/parent::*}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /var/folders/cw/mv6p5m6s2k3...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55213}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55213/devtoo..., se:cdpVersion: 120.0.6099.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 15d67add5466a3bf792a855248154be0
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /var/folders/cw/mv6p5m6s2k3...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56070}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56070/devtoo..., se:cdpVersion: 120.0.6099.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee6adb6164fbfb47b6212fd1da1ad2c8
 	at java.base@21.0.1/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base@21.0.1/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base@21.0.1/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -2117,11 +2117,11 @@ Session ID: 15d67add5466a3bf792a855248154be0
 	... 89 more
 </failure>
   </testcase>
-  <testcase name="Month field-empty, rest-valid form Buy" classname="ru.netology.test.BuyTest" time="20.648">
-    <failure message="Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417348814.26.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417348814.26.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)" type="com.codeborne.selenide.ex.ElementNotFound">Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}
+  <testcase name="Month field-empty, rest-valid form Buy" classname="ru.netology.test.BuyTest" time="20.727">
+    <failure message="Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419896546.26.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419896546.26.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)" type="com.codeborne.selenide.ex.ElementNotFound">Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}
 Expected: visible
-Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417348814.26.png
-Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417348814.26.html
+Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419896546.26.png
+Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419896546.26.html
 Timeout: 20 s.
 Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:91)
@@ -2134,7 +2134,7 @@ Caused by: NoSuchElementException: Cannot locate an element  .notification__cont
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy18.shouldBe(Unknown Source)
-	at app//ru.netology.page.BuyPage.notSuccessNotification(BuyPage.java:56)
+	at app//ru.netology.page.BuyPage.notSuccessNotification(BuyPage.java:53)
 	at app//ru.netology.test.BuyTest.shouldTestNegativeMonthEmpty(BuyTest.java:132)
 	at java.base@21.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.1/java.lang.reflect.Method.invoke(Method.java:580)
@@ -2259,11 +2259,11 @@ Driver info: driver.version: unknown
 	... 89 more
 </failure>
   </testcase>
-  <testcase name="Test empty form" classname="ru.netology.test.BuyTest" time="20.617">
-    <failure message="Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417369378.27.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417369378.27.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)" type="com.codeborne.selenide.ex.ElementNotFound">Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}
+  <testcase name="Test empty form" classname="ru.netology.test.BuyTest" time="20.73">
+    <failure message="Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}&#10;Expected: visible&#10;Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419917247.27.png&#10;Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419917247.27.html&#10;Timeout: 20 s.&#10;Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)" type="com.codeborne.selenide.ex.ElementNotFound">Element not found { .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)}
 Expected: visible
-Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417369378.27.png
-Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705417369378.27.html
+Screenshot: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419917247.27.png
+Page source: file:/Users/globus_user/Desktop/QA_Diploma/build/reports/tests/1705419917247.27.html
 Timeout: 20 s.
 Caused by: NoSuchElementException: Cannot locate an element  .notification__content.findBy(text &quot;Ошибка! Банк отказал в проведении операции.&quot;)
 	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:91)
@@ -2276,7 +2276,7 @@ Caused by: NoSuchElementException: Cannot locate an element  .notification__cont
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
 	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
 	at app/jdk.proxy3/jdk.proxy3.$Proxy18.shouldBe(Unknown Source)
-	at app//ru.netology.page.BuyPage.notSuccessNotification(BuyPage.java:56)
+	at app//ru.netology.page.BuyPage.notSuccessNotification(BuyPage.java:53)
 	at app//ru.netology.test.BuyTest.shouldTestEmptyForm(BuyTest.java:171)
 	at java.base@21.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.1/java.lang.reflect.Method.invoke(Method.java:580)
