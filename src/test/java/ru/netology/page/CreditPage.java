@@ -43,10 +43,10 @@ public class CreditPage {
         CVCField.setValue(CVC);
         continueButton.click();
     }
-    public void successNotificationWait(){
+    public void successNotification(){
         successMessage.shouldBe(visible,Duration.ofSeconds(20));
     }
-    public void notSuccessNotification(){
+    public void notSuccessNotificationWait(){
         errorMessage.shouldBe(visible,Duration.ofSeconds(20));
     }
     public void wrongCardNumberNotification(){
@@ -66,9 +66,6 @@ public class CreditPage {
     }
     public void ownerEmptyNotificationWait(){
         emptyOwnerError.shouldBe(visible,Duration.ofSeconds(20));
-    }
-    public void incorrectFormatOwnerNotificationWait(){
-        incorrectFormatOwner.shouldBe(visible,Duration.ofSeconds(20));
     }
     public void wrongFormatCVVNotificationWait(){
         wrongFormatCVV.shouldBe(visible,Duration.ofSeconds(20));

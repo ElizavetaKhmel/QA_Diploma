@@ -32,24 +32,25 @@ public class BuyCreditTest {
     @Test
     @DisplayName("Should get valid data form credit")
     public void shouldTest() {
-        creditPage.putData(DataHelper.getFirstCardInfo(),DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
-       creditPage.successNotificationWait();
-        Assertions.assertEquals("APPROVED", SQLHelper.geStatusInData());
+        creditPage.putData("4444 4444 4444 4441",DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
+       creditPage.successNotification();
+        Assertions.assertEquals("APPROVED", SQLHelper.getStatusForCreditForm());
     }
 
     @Test
     @DisplayName("Owner with double surname and hyphen form credit")
     public void shouldTestPositiveOwner() {
-        creditPage.putData(DataHelper.getFirstCardInfo(),DataHelper.month(),DataHelper.getRandomYear("yy"),("VASILIEVA-VINOGRADOVA MARIA"),DataHelper.cvcInfo());
-        creditPage.successNotificationWait();
-        Assertions.assertEquals("APPROVED", SQLHelper.geStatusInData());
+        creditPage.putData("4444 4444 4444 4441",DataHelper.month(),DataHelper.getRandomYear("yy"),("VASILIEVA-VINOGRADOVA MARIA"),DataHelper.cvcInfo());
+        creditPage.successNotification();
+        Assertions.assertEquals("APPROVED", SQLHelper.getStatusForCreditForm());
     }
 
     @Test
     @DisplayName("Invalid value in field Card Number form credit")
     public void shouldTestNegativeCardNumber() {
-        creditPage.putData(DataHelper.getSecondCardInfo(),DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
+        creditPage.putData("4444 4444 4444 4442",DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         creditPage.wrongCardNumberNotification();
+        creditPage.notSuccessNotificationWait();
         Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
     }
 
@@ -58,54 +59,61 @@ public class BuyCreditTest {
     public void shouldTestNegativeNullCardNumber() {
         creditPage.putData("0000000000000000",DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         creditPage.wrongCardNumberNotification();
+        creditPage.notSuccessNotificationWait();
         Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
     }
 
     @Test
     @DisplayName("Invalid value Month form credit")
     public void shouldTestNegativeMonth() {
-        creditPage.putData(DataHelper.getFirstCardInfo(),DataHelper.getRandomMonth(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
+        creditPage.putData("4444 4444 4444 4442",("13"),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         creditPage.wrongMonthNotification();
+        creditPage.notSuccessNotificationWait();
         Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
     }
 
     @Test
     @DisplayName("Invalid value Year form credit")
     public void shouldTestNegativeYear() {
-        creditPage.putData(DataHelper.getFirstCardInfo(),DataHelper.month(),("30"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
+        creditPage.putData("4444 4444 4444 4442",DataHelper.month(),("31"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         creditPage.validityErrorNotification();
+        creditPage.notSuccessNotificationWait();
         Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
     }
 
     @Test
     @DisplayName("One letter in field Owner form credit")
     public void shouldTestNegativeOneLetterOwner() {
-        creditPage.putData(DataHelper.getFirstCardInfo(),DataHelper.month(),DataHelper.getRandomYear("yy"),("А"),DataHelper.cvcInfo());
-        creditPage.incorrectFormatOwnerNotificationWait();
+        creditPage.putData("4444 4444 4444 4442",DataHelper.month(),DataHelper.getRandomYear("yy"),("А"),DataHelper.cvcInfo());
+        creditPage.ownerEmptyNotificationWait();
+        creditPage.notSuccessNotificationWait();
         Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
     }
 
     @Test
     @DisplayName("Invalid value CVC/CVV form credit")
     public void shouldTestNegativeCVC() {
-        creditPage.putData(DataHelper.getFirstCardInfo(),DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
+        creditPage.putData("4444 4444 4444 4442",DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),("1"));
         creditPage.wrongFormatCVVNotificationWait();
+        creditPage.notSuccessNotificationWait();
         Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
     }
 
     @Test
     @DisplayName("Latin value in owner field form credit")
     public void shouldTestNegativeLatinValueOwner() {
-        creditPage.putData(DataHelper.getFirstCardInfo(),DataHelper.month(),DataHelper.getRandomYear("yy"),("ИРИНА МИРОНОВА"),DataHelper.cvcInfo());
-        creditPage.incorrectFormatOwnerNotificationWait();
+        creditPage.putData("4444 4444 4444 4442",DataHelper.month(),DataHelper.getRandomYear("yy"),("ИРИНА МИРОНОВА"),DataHelper.cvcInfo());
+        creditPage.ownerEmptyNotificationWait();
+        creditPage.notSuccessNotificationWait();
         Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
     }
 
     @Test
     @DisplayName("Special symbol and numbers in owner field form credit")
     public void shouldTestNegativeSpecialSymbolOwner() {
-        creditPage.putData(DataHelper.getFirstCardInfo(),DataHelper.month(),DataHelper.getRandomYear("yy"),("$V1R1DOV A1EK$ANDR"),DataHelper.cvcInfo());
-        creditPage.incorrectFormatOwnerNotificationWait();
+        creditPage.putData("4444 4444 4444 4442",DataHelper.month(),DataHelper.getRandomYear("yy"),("$V1R1DOV A1EK$ANDR"),DataHelper.cvcInfo());
+        creditPage.ownerEmptyNotificationWait();
+        creditPage.notSuccessNotificationWait();
         Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
     }
     @Test
@@ -113,43 +121,43 @@ public class BuyCreditTest {
     public void shouldTestNegativeCardNumberEmpty() {
         creditPage.putData("","11","25","IVANOVA MARIA","543");
         creditPage.expiredCardNotificationWait();
-        creditPage.notSuccessNotification();
+        creditPage.notSuccessNotificationWait();
         Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
     }
 
     @Test
     @DisplayName("Month field-empty, rest-valid form credit")
     public void shouldTestNegativeMonthEmpty() {
-        creditPage.putData("4444 4444 4444 4441","","25","IVANOVA MARIA","543");
+        creditPage.putData("4444 4444 4444 4442","","25","IVANOVA MARIA","543");
         creditPage.wrongMonthNotification();
-        creditPage.notSuccessNotification();
+        creditPage.notSuccessNotificationWait();
         Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
     }
 
     @Test
     @DisplayName("Year field-empty, rest-valid form credit")
     public void shouldTestNegativeYearEmpty() {
-        creditPage.putData("4444 4444 4444 4441","11","","IVANOVA MARIA","543");
+        creditPage.putData("4444 4444 4444 4442","11","","IVANOVA MARIA","543");
         creditPage.wrongYearNotification();
-        creditPage.notSuccessNotification();
+        creditPage.notSuccessNotificationWait();
         Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
     }
 
     @Test
     @DisplayName("Owner field-empty, rest-valid form credit")
     public void shouldTestNegativeOwnerEmpty() {
-        creditPage.putData("4444 4444 4444 4441","11","12","","543");
+        creditPage.putData("4444 4444 4444 4442","11","12","","543");
         creditPage.ownerEmptyNotificationWait();
-        creditPage.notSuccessNotification();
+        creditPage.notSuccessNotificationWait();
         Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
     }
 
     @Test
     @DisplayName("CVC/CVV field-empty, rest-valid form credit")
     public void shouldTestNegativeCVCEmpty() {
-        creditPage.putData("4444 4444 4444 4441","11","12","IVANOVA MARIA","");
+        creditPage.putData("4444 4444 4444 4442","11","12","IVANOVA MARIA","");
         creditPage.wrongFormatCVVNotificationWait();
-        creditPage.notSuccessNotification();
+        creditPage.notSuccessNotificationWait();
         Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
     }
 
@@ -162,6 +170,7 @@ public class BuyCreditTest {
         creditPage.wrongYearNotification();
         creditPage.ownerEmptyNotificationWait();
         creditPage.wrongFormatCVVNotificationWait();
+        creditPage.notSuccessNotificationWait();
         Assertions.assertNull(SQLHelper.getStatusForCreditForm());
     }
 

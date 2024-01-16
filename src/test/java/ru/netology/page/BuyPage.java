@@ -80,9 +80,6 @@ public class BuyPage {
         emptyOwnerError.shouldBe(visible, Duration.ofSeconds(20));
     }
 
-    public void incorrectFormatOwnerNotificationWait() {
-        incorrectFormatOwner.shouldBe(visible, Duration.ofSeconds(20));
-    }
 
     public void incorrectFormatCVVNotificationWait() {
         wrongFormatCVV.shouldBe(visible, Duration.ofSeconds(20));

@@ -10,3 +10,9 @@ services:
       MYSQL_ROOT_PASSWORD: rootpassword
     ports:
       - "3306:3306"
+
+  node-app:
+    build: ./gate-simulator/
+    image: node-app:1.0
+    ports:
+      - '9999:9999'
