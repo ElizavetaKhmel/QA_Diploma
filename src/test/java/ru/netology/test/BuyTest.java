@@ -33,7 +33,7 @@ public class BuyTest {
     public void shouldTest() {
         buyPage.putData("4444 4444 4444 4441",DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         buyPage.successNotificationWait();
-        Assertions.assertEquals("APPROVED", SQLHelper.geStatusInData());
+        Assertions.assertEquals("APPROVED", SQLHelper.getStatusInData());
     }
 
     @Test
@@ -41,7 +41,7 @@ public class BuyTest {
     public void shouldTestPositiveOwner() {
         buyPage.putData("4444 4444 4444 4441",DataHelper.month(),DataHelper.getRandomYear("yy"),("VASILIEVA-VINOGRADOVA MARIA"),DataHelper.cvcInfo());
         buyPage.successNotificationWait();
-        Assertions.assertEquals("APPROVED", SQLHelper.geStatusInData());
+        Assertions.assertEquals("APPROVED", SQLHelper.getStatusInData());
     }
 
     @Test
@@ -49,8 +49,7 @@ public class BuyTest {
     public void shouldTestNegativeCardNumber() {
         buyPage.putData("4444 4444 4444",DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         buyPage.incorrectCardNumberNotification();
-        buyPage.notSuccessNotification();
-        Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
+        Assertions.assertEquals("DECLINED", SQLHelper.getStatusInData());
     }
 
     @Test
@@ -58,8 +57,7 @@ public class BuyTest {
     public void shouldTestNegativeNullCardNumber() {
         buyPage.putData("0000000000000000",DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         buyPage.incorrectCardNumberNotification();
-        buyPage.notSuccessNotification();
-        Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
+        Assertions.assertEquals("DECLINED", SQLHelper.getStatusInData());
     }
 
     @Test
@@ -67,8 +65,7 @@ public class BuyTest {
     public void shouldTestNegativeMonth() {
         buyPage.putData("4444 4444 4444 4442",("13"),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         buyPage.incorrectMonthNotification();
-        buyPage.notSuccessNotification();
-        Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
+        Assertions.assertEquals("DECLINED", SQLHelper.getStatusInData());
     }
 
     @Test
@@ -76,8 +73,7 @@ public class BuyTest {
     public void shouldTestNegativeYear() {
         buyPage.putData("4444 4444 4444 4442",DataHelper.month(),("31"),DataHelper.ownerInfo(),DataHelper.cvcInfo());
         buyPage.validityErrorNotification();
-        buyPage.notSuccessNotification();
-        Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
+        Assertions.assertEquals("DECLINED", SQLHelper.getStatusInData());
     }
 
     @Test
@@ -85,8 +81,7 @@ public class BuyTest {
     public void shouldTestNegativeOneLetterOwner() {
         buyPage.putData("4444 4444 4444 4442",DataHelper.month(),DataHelper.getRandomYear("yy"),("А"),DataHelper.cvcInfo());
         buyPage.ownerEmptyNotificationWait();
-        buyPage.notSuccessNotification();
-        Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
+        Assertions.assertEquals("DECLINED", SQLHelper.getStatusInData());
     }
 
     @Test
@@ -94,8 +89,7 @@ public class BuyTest {
     public void shouldTestNegativeCVC() {
         buyPage.putData("4444 4444 4444 4441",DataHelper.month(),DataHelper.getRandomYear("yy"),DataHelper.ownerInfo(),("65"));
         buyPage.incorrectFormatCVVNotificationWait();
-        buyPage.notSuccessNotification();
-        Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
+        Assertions.assertEquals("DECLINED", SQLHelper.getStatusInData());
     }
 
     @Test
@@ -103,8 +97,7 @@ public class BuyTest {
     public void shouldTestNegativeLatinValueOwner() {
         buyPage.putData("4444 4444 4444 4442",DataHelper.month(),DataHelper.getRandomYear("yy"),("ИРИНА МИРОНОВА"),DataHelper.cvcInfo());
         buyPage.ownerEmptyNotificationWait();
-        buyPage.notSuccessNotification();
-        Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
+        Assertions.assertEquals("DECLINED", SQLHelper.getStatusInData());
     }
 
     @Test
@@ -112,16 +105,14 @@ public class BuyTest {
     public void shouldTestNegativeSpecialSymbolOwner() {
         buyPage.putData("4444 4444 4444 4442",DataHelper.month(),DataHelper.getRandomYear("yy"),("$V1R1DOV A1EK$ANDR"),DataHelper.cvcInfo());
         buyPage.ownerEmptyNotificationWait();
-        buyPage.notSuccessNotification();
-        Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
+        Assertions.assertEquals("DECLINED", SQLHelper.getStatusInData());
     }
     @Test
     @DisplayName("Card number field-empty, rest-valid form Buy")
     public void shouldTestNegativeCardNumberEmpty() {
         buyPage.putData("","11","25","IVANOVA MARIA","543");
         buyPage.incorrectCardNotificationWait();
-        buyPage.notSuccessNotification();
-        Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
+        Assertions.assertNull(SQLHelper.getStatusInData());
     }
 
     @Test
@@ -129,8 +120,7 @@ public class BuyTest {
     public void shouldTestNegativeMonthEmpty() {
         buyPage.putData("4444 4444 4444 4442","","25","IVANOVA MARIA","543");
         buyPage.incorrectMonthNotification();
-        buyPage.notSuccessNotification();
-        Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
+        Assertions.assertNull(SQLHelper.getStatusInData());
     }
 
     @Test
@@ -138,8 +128,7 @@ public class BuyTest {
     public void shouldTestNegativeYearEmpty() {
         buyPage.putData("4444 4444 4444 4442","11","","IVANOVA MARIA","543");
         buyPage.validityErrorNotification();
-        buyPage.notSuccessNotification();
-        Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
+        Assertions.assertNull(SQLHelper.getStatusInData());
     }
 
     @Test
@@ -147,8 +136,7 @@ public class BuyTest {
     public void shouldTestNegativeOwnerEmpty() {
         buyPage.putData("4444 4444 4444 4442","11","12","","543");
         buyPage.ownerEmptyNotificationWait();
-        buyPage.notSuccessNotification();
-        Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
+        Assertions.assertNull(SQLHelper.getStatusInData());
     }
 
     @Test
@@ -156,8 +144,7 @@ public class BuyTest {
     public void shouldTestNegativeCVCEmpty() {
         buyPage.putData("4444 4444 4444 4442","11","12","IVANOVA MARIA","");
         buyPage.incorrectFormatCVVNotificationWait();
-        buyPage.notSuccessNotification();
-        Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
+        Assertions.assertNull(SQLHelper.getStatusInData());
     }
 
     @Test
@@ -168,7 +155,6 @@ public class BuyTest {
         buyPage.incorrectMonthNotification();
         buyPage.incorrectYearNotification();
         buyPage.ownerEmptyNotificationWait();
-        buyPage.notSuccessNotification();
-        Assertions.assertNull(SQLHelper.getStatusForCreditForm());
+        Assertions.assertNull(SQLHelper.getStatusInData());
     }
 }
